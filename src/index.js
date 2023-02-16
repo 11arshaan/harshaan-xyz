@@ -1,15 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import "./index.scss";
 import './assets/fonts/IBMPlexMono-Regular.ttf';
+
+import App from "./routes/App";
+import Home from "./routes/Home";
+import About from "./routes/About";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "",
+        element: <Home />
+      },
+      {
+        path: "about",
+        element: <About />
+      }],
   },
 ]);
 

@@ -2,8 +2,7 @@ export default function HomeCircleSVG() {
   return (
     <>
       <svg
-        width="585"
-        height="585"
+        className="home__circleSVG"
         viewBox="0 0 585 585"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
