@@ -6,9 +6,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
 import './assets/fonts/IBMPlexMono-Regular.ttf';
 
-import App from "./routes/App";
+import App from "./App";
 import Home from "./routes/Home";
 import About from "./routes/About";
+import Projects from "./routes/Projects";
+import Art from "./routes/Art";
+import Music from "./routes/Music";
+import Contact from "./routes/Contact";
 
 
 const router = createBrowserRouter([
@@ -23,7 +27,23 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />
-      }],
+      },
+      {
+        path: "projects",
+        element: <Projects />
+      },
+      {
+        path: "art",
+        element: <Art />
+      },
+      {
+        path: "music",
+        element: <Music />
+      },
+      {
+        path: "contact",
+        element: <Contact />
+      },],
   },
 ]);
 

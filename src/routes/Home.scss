@@ -1,3 +1,7 @@
+.home-container {
+  z-index: 1;
+}
+
 .home {
   --h1font: "IBMPlexMono-Bold";
   display: flex;
@@ -17,6 +21,10 @@
     margin: 0 auto;
     width: 40%;
     z-index: -1;
+
+    #circlepath {
+      transform-origin: center;
+    }
   }
 
   &__titlebox {
@@ -72,6 +80,12 @@
     background-color: transparent;
     font-weight: lighter;
     letter-spacing: 1px;
+    cursor: pointer;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
 
     &::after {
       content: '';
