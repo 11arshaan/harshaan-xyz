@@ -1,5 +1,9 @@
 .home-container {
   z-index: 1;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home {
@@ -11,9 +15,8 @@
   color: #fff;
   font-family: var(--h1font);
   height: 100%;
-  margin-top: 15%;
+  margin-top: 14%;
   z-index: 1;
-  
 
   &__circleSVG {
     text-align: center;
@@ -53,8 +56,6 @@
       font-family: "IBMPlexMono-Thin";
       font-weight: lighter;
     }
-
-  
   }
 
   &__subtitle {
@@ -64,7 +65,6 @@
     font-size: 3.6rem;
     letter-spacing: 3px;
     font-weight: lighter;
-
   }
 
   &__resume {
@@ -75,7 +75,7 @@
     padding: 1.5rem 5rem;
     padding-left: 4.1rem;
     color: white;
-    border: 1px solid #3B3B3B;
+    border: 1px solid #3b3b3b;
     border-radius: 5rem;
     background-color: transparent;
     font-weight: lighter;
@@ -88,14 +88,18 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: relative;
       display: inline-block;
-      top: .2rem;
-      left: .8rem;
+      top: 0.2rem;
+      left: 0.8rem;
       width: 27px;
       height: 27px;
       background-image: url("../assets/svg/download.svg");
     }
   }
 }
+
+
+
+

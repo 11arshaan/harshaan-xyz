@@ -49,7 +49,7 @@ const rainbowStyle = {
           </div>
 
           <div className="navbar__links">
-            <Link to="/about">About</Link>
+            <Link to="/about">Skills</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/art">Art</Link>
             <Link to="/music">Music</Link>

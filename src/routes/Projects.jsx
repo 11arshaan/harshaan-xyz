@@ -1,9 +1,8 @@
 import "./Projects.scss";
 import cloudcastle from "../assets/images/cloudcastle.png";
-import { useEffect } from "react";
-import anime from "animejs";
 
-function readMore(e) {
+
+function readMore() {
   const readMore = document.querySelector(".projectcard__readmore");
 
   readMore.classList.toggle("checked");
@@ -16,7 +15,7 @@ export default function Projects() {
   return (
     <div className="projects">
       <div className="projectcard">
-        <img src={cloudcastle}></img>
+        <img src={cloudcastle} alt="a castle build with clouds"></img>
         <h3 className="projectcard__title">Web Design Lab</h3>
         <h2 className="projectcard__subtitle">
           custom components and web graphic experiments

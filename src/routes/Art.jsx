@@ -1,8 +1,7 @@
 import "./Art.scss";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 export default function Art() {
-    const [categories, setCategories] = useState(["all"]);
 
     useEffect(()=>{
         
@@ -13,6 +12,7 @@ export default function Art() {
         <div className="art__category--container"> 
             <button className="art__category">All</button>
             <button className="art__category">3D</button>
+            <button className="art__category">Design</button>
             <button className="art__category">VFX</button>
             <button className="art__category">Code</button>
         </div>
