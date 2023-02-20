@@ -14,8 +14,7 @@ export default function Navbar() {
 
  
   
-
-  const rainbowStyle = {
+const rainbowStyle = {
     // Spread the colors to define them as custom properties
     // on this element
     ...colors,
@@ -44,6 +43,22 @@ export default function Navbar() {
     <>
       <div className="navbar">
         <div className="navbar__container" style={rainbowStyle}>
+          <div className="navbar__title">
+            <Logo />
+            <Link to="/">Harshaan Singh</Link>
+          </div>
+
+          <div className="navbar__links">
+            <Link to="/about">About</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/art">Art</Link>
+            <Link to="/music">Music</Link>
+            <Link to="/contact">Contact</Link>
+          </div>
+        </div>
+
+
+        <div className="navbar__container--block" style={rainbowStyle}>
           <div className="navbar__title">
             <Logo />
             <Link to="/">Harshaan Singh</Link>
