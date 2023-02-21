@@ -1,0 +1,76 @@
+#skills {
+  margin: 0 10%;
+  margin-top: 18%;
+  color: white;
+  font-family: "IBMPlexMono";
+  letter-spacing: 10px;
+  font-size: 13rem;
+  border: 3px solid rgb(85, 85, 85);
+  padding: 1rem;
+  width: min-content;
+}
+
+.skills {
+  position: relative;
+  left: 3%;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 5%;
+
+  display: flex;
+  justify-content: center;
+
+  h3 {
+    color: white;
+    font-family: "IBMPlexMono";
+    font-size: 4.6rem;
+  }
+
+  &__creative,
+  &__development {
+    font-family: "IBMPlexSans";
+    font-size: 1.8rem;
+    color: white;
+    width: 50%;
+    
+    padding: 2rem;
+    
+    &:first-child{
+        margin-right: 3%;
+    }
+
+    ul {
+        padding: 2rem;
+
+    }
+
+    li {
+        list-style: none;
+        padding: .4rem 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+
+    &--icons{
+        display: flex;
+        align-content: flex-start;
+        align-self: flex-start;
+
+    }
+    svg {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin: 0 1rem;
+    }
+
+    img {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin: 0 1rem;
+    }
+  }
+}
