@@ -18,6 +18,12 @@
   width: 30%;
   padding: 0.8rem;
 
+  transition: 1s all;
+
+  &:hover {
+    transition: 1s all;
+    border: 1px solid teal;
+  }
   &__title {
     font-family: "IBMPlexMono-Bold";
     font-size: 2.4rem;
@@ -29,6 +35,7 @@
     color: white;
     font-weight: lighter;
     font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
 
   img {

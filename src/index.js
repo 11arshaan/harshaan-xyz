@@ -13,6 +13,7 @@ import Projects from "./routes/Projects";
 import Art from "./routes/Art";
 import Music from "./routes/Music";
 import Contact from "./routes/Contact";
+import Upload from "./routes/Upload";
 
 
 const router = createBrowserRouter([
@@ -43,7 +44,11 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />
-      },],
+      },
+      {
+        path: "upload",
+        element: <Upload />
+      }],
   },
 ]);
 

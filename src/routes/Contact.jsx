@@ -57,8 +57,6 @@ export default function Contact() {
         <div className="contact__link"><LinkedInIcon className="linkedin" /> <a id="linkedin" href="https://www.linkedin.com/in/harshaan/" rel="noreferrer" target="_blank">/ 11arshaan</a></div>
         <div className="contact__link"><EmailIcon /> <p onClick={copyClipboard} id="email">harshaan.work@gmail.com</p> <span id="copied" ref={copyRef}>Copied!</span></div>
         <div className="contact__link"><PhoneIcon /> <p >770 769 5348</p></div>
-        </div>
-
         <div className="resumebtn">
             <a href={wavfile} download="Abyss Pulse 1.wav">
             <button className="home__resume">
@@ -66,6 +64,9 @@ export default function Contact() {
             </button>
           </a>
         </div>
+        </div>
+
+        
       
     </div>
   );

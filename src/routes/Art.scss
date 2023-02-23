@@ -9,10 +9,11 @@
 }
 
 .art__category--container {
-  --gradientDeg: 60deg;
+ 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   button {
     color: white;
