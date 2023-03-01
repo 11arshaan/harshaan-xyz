@@ -1,31 +1,44 @@
 import "./Art.scss";
-import { doc, query, getDoc, collection, getDocs } from "firebase/firestore";
-import { db } from "../utils/firebase.utils";
-
-import { useEffect, useState } from "react";
+import { getImages } from "../utils/firebase.utils";
+import { useEffect, useState, useContext } from "react";
+import { ArtContext } from "../utils/ArtContext";
+import ImageCard from "../components/ImageCard";
+import { ArtModal } from "../components/ArtModal";
+import anime from "animejs/lib/anime.es.js";
 
 export default function Art() {
-  const [images, setImages] = useState([]);
+  const [visible, setVisible] = useState(false);
+  const [modalImage, setModalImage] = useState({});
+  const { images, setImages } = useContext(ArtContext);
 
-  async function getImages() {
-    const imageList = [];
-    const q = query(collection(db, "art"));
-    const images = await getDocs(q);
-    images.forEach(img => imageList.push(img.data().url));
-    console.log(imageList);
-    return imageList;
+  function handleImage(e) {
+    const target = e.target;
+    const selectedImage = images.find((img) => img.url === target.src);
+    setModalImage(selectedImage);
+    setVisible(true);
+
   }
 
   useEffect(() => {
-    setImages(getImages());
-
+    getImages().then((imageList) => {
+      setImages(imageList);
+    });
   }, []);
 
   return (
-    <div className="art">
-      {images.forEach(img=>{
-        return <img src={img} />
-      })}
-    </div>
+    <>
+      <ArtModal visible={visible} setVisible={setVisible} modalImage={modalImage} />
+      <div className="art">
+        {images.map((image) => (
+          <ImageCard
+            key={image.url}
+            url={image.url}
+            title={image.title}
+            description={image.description}
+            handleImage={handleImage}
+          />
+        ))}
+      </div>
+    </>
   );
 }

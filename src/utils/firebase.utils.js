@@ -2,7 +2,9 @@ import { initializeApp } from "firebase/app";
 import {
   getFirestore,
   doc,
+  query,
   getDoc,
+  getDocs,
   setDoc,
   addDoc,
   collection,
@@ -34,9 +36,18 @@ export const storage = getStorage(); // this instantiates the storage service AP
 export const storageRef = ref(storage); //this creates an object referring to the storage bucket (starting from the root)
 export const artRef = ref(storage, "art"); // this is how we create a reference to a specific file by using the second parameter of ref()
 
-// GET IMAGE FROM DB
-// const imageDocRef = doc(db, "art", uid);
-// const userSnapshot = await getDoc(imageDocRef);
+
+
+// GET IMAGES FROM DB
+export async function getImages() {
+  const imageList = [];
+  const q = query(collection(db, "art"));
+  const images = await getDocs(q);
+  images.forEach((img) => imageList.push(img.data()));
+  return imageList;
+}
+
+
 
 // UPLOAD IMAGE
 export async function uploadImage(imageFile, imageName, imageDescription) {
