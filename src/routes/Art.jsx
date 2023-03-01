@@ -1,20 +1,31 @@
 import "./Art.scss";
-import { useEffect } from "react";
+import { doc, query, getDoc, collection, getDocs } from "firebase/firestore";
+import { db } from "../utils/firebase.utils";
+
+import { useEffect, useState } from "react";
 
 export default function Art() {
+  const [images, setImages] = useState([]);
 
-    useEffect(()=>{
-        
-    }, []);
+  async function getImages() {
+    const imageList = [];
+    const q = query(collection(db, "art"));
+    const images = await getDocs(q);
+    images.forEach(img => imageList.push(img.data().url));
+    console.log(imageList);
+    return imageList;
+  }
 
-    return (
+  useEffect(() => {
+    setImages(getImages());
+
+  }, []);
+
+  return (
     <div className="art">
-        <div className="art__category--container"> 
-            <button className="art__category">All</button>
-            <button className="art__category">3D</button>
-            <button className="art__category">Design</button>
-            <button className="art__category">VFX</button>
-            <button className="art__category">Code</button>
-        </div>
-    </div>);
+      {images.forEach(img=>{
+        return <img src={img} />
+      })}
+    </div>
+  );
 }
