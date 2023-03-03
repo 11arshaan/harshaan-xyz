@@ -97,6 +97,31 @@
     }
   }
 
+  &__visitsite {
+    text-align: center;
+    text-decoration: none;
+    font-family: "IBMPlexSans";
+    color: white;
+    font-size: 1.6rem;
+    background-color: var(--bg);
+    width: 12rem;
+    padding: 1rem 1rem;
+    margin: 1rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+
+    &:last-child {
+      background-color: #1c274c;
+      border: 1px solid rgb(31, 37, 62);
+
+      &:hover {
+        background-color: #353a4c;
+      }
+    }
+
+  }
+
   &__readmore {
     
     opacity: 1;

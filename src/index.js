@@ -3,9 +3,11 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
-import './assets/fonts/IBMPlexMono-Regular.ttf';
+import "./assets/fonts/IBMPlexMono-Regular.ttf";
 import { ArtProvider } from "./utils/ArtContext";
-
+import { SongProvider } from "./utils/SongContext";
+import { PlayerProvider } from "./utils/PlayerContext";
+import { HowlerProvider } from "./utils/HowlerContext";
 
 import App from "./App";
 import Home from "./routes/Home";
@@ -14,8 +16,6 @@ import Projects from "./routes/Projects";
 import Art from "./routes/Art";
 import Music from "./routes/Music";
 import Contact from "./routes/Contact";
-import Upload from "./routes/Upload";
-
 
 const router = createBrowserRouter([
   {
@@ -24,43 +24,48 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "about",
-        element: <About />
+        element: <About />,
       },
       {
         path: "projects",
-        element: <Projects />
+        element: <Projects />,
       },
       {
         path: "art",
-        element: <Art />
+        element: <Art />,
       },
       {
         path: "music",
-        element: <Music />
+        element: <Music />,
       },
       {
         path: "contact",
-        element: <Contact />
+        element: <Contact />,
       },
-      {
-        path: "upload",
-        element: <Upload />
-      }],
+      // {
+      //   path: "upload",
+      //   element: <Upload />
+      // }],
+    ],
   },
 ]);
-
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
-  <ArtProvider>
-  <RouterProvider router={router} />
-  </ArtProvider>
+  <SongProvider>
+    <HowlerProvider>
+      <PlayerProvider>
+        <ArtProvider>
+          <RouterProvider router={router} />
+        </ArtProvider>
+      </PlayerProvider>
+    </HowlerProvider>
+  </SongProvider>
   // </React.StrictMode>
 );
 

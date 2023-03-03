@@ -34,7 +34,7 @@ export default function Projects() {
 
         <div className="projectcard__buttons">
           <label onClick={readMore} htmlFor="collapsible">Read More</label>
-          <button>Visit Site</button>
+          <a className="projectcard__visitsite" href="https://iridescent-quokka-65e71d.netlify.app/" target="_blank">Visit Site</a>
         </div>
       </div>
     </div>
