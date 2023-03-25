@@ -1,42 +1,26 @@
 import "./Projects.scss";
 import cloudcastle from "../assets/images/cloudcastle.png";
-
-
-function readMore() {
-  const readMore = document.querySelector(".projectcard__readmore");
-
-  readMore.classList.toggle("checked");
-
-}
+import welcomeLogo from "../assets/images/WELCOME_Logo.png";
+import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
-  
-
   return (
     <div className="projects">
-      <div className="projectcard">
-        <img src={cloudcastle} alt="a castle build with clouds"></img>
-        <h3 className="projectcard__title">Web Design Lab</h3>
-        <h2 className="projectcard__subtitle">
-          custom components and web graphic experiments
-        </h2>
-
-        <div className="projectcard__readmore">
-          <input id="collapsible" type="checkbox" />
-          <hr></hr>
-          <p>
-            This is an interactive demo that contains custom components and
-            designs. It is hosted on GitHub pages; the source code is written
-            for easy re-use via copy/paste. The components are written with
-            React.
-          </p>
-        </div>
-
-        <div className="projectcard__buttons">
-          <label onClick={readMore} htmlFor="collapsible">Read More</label>
-          <a className="projectcard__visitsite" href="https://iridescent-quokka-65e71d.netlify.app/" target="_blank">Visit Site</a>
-        </div>
-      </div>
+      <ProjectCard
+        img={welcomeLogo}
+        title="Eden AI"
+        subtitle="react-native sketchpad app for AI sketch-to-image generation"
+        description="This is a mobile app that allows the user to sketch on a touch canvas. The sketch is then sent to a server that is running a custom configuration of the control net AI model. This model can generate high fidelity images after reading the text prompt and scanning the sketched image. The app also includes regular stable diffusion generation via text and image to image. The canvas function was coded from scratch using react-native-skia."
+        link="https://www.welcomejpeg.com/"
+      />
+      <ProjectCard
+        img={cloudcastle}
+        title="Web Design Lab"
+        subtitle="custom components and web graphic experiments"
+        description="This is an interactive demo that contains custom components and
+            designs. It is also an exhibition of my web graphics experiments."
+        link="https://iridescent-quokka-65e71d.netlify.app/"
+      />
     </div>
   );
 }
