@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 20rem;
 }
 
 
@@ -17,7 +18,14 @@
   border-radius: 2.6rem;
   width: 30%;
   padding: 0.8rem;
+  margin-bottom: 15rem;
 
+  transition: 1s all;
+
+  &:hover {
+    transition: 1s all;
+    border: 1px solid teal;
+  }
   &__title {
     font-family: "IBMPlexMono-Bold";
     font-size: 2.4rem;
@@ -29,6 +37,7 @@
     color: white;
     font-weight: lighter;
     font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
 
   img {
@@ -90,6 +99,31 @@
     }
   }
 
+  &__visitsite {
+    text-align: center;
+    text-decoration: none;
+    font-family: "IBMPlexSans";
+    color: white;
+    font-size: 1.6rem;
+    background-color: var(--bg);
+    width: 12rem;
+    padding: 1rem 1rem;
+    margin: 1rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+
+    &:last-child {
+      background-color: #1c274c;
+      border: 1px solid rgb(31, 37, 62);
+
+      &:hover {
+        background-color: #353a4c;
+      }
+    }
+
+  }
+
   &__readmore {
     
     opacity: 1;
@@ -116,7 +150,7 @@
 }
 
 .projectcard__readmore.checked {
-    max-height: 15rem;
+    max-height: 30rem;
     transition: max-height 0.5s ease-in-out;
 }
 

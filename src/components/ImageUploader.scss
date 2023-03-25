@@ -1,0 +1,55 @@
+.uploader {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 65vh;
+    min-height: 50rem;
+
+    border: 1px solid white;
+    transition: background .5s;
+
+    form {
+        width: 100%;
+        height: 100%;
+    }
+
+    &--hover {
+        transition: background .5s;
+        background: #56586b;
+    }
+
+    textarea {
+        width: 50%;
+        height: 45%;
+    }
+}
+
+#file-input {
+    display: none;
+}
+
+
+.thumbnail {
+    height: 20rem;
+}
+
+#file-select{
+    padding: 1rem 2rem;
+    background-color: rgb(19, 43, 43);
+    border-radius: .5rem;
+    font-family: "IBMPlexSans";
+    font-size: 2rem;
+    color: white;
+}
+
+#uploadbtn {
+    padding: 1rem 2rem;
+    background-color: rgb(19, 43, 43);
+    border-radius: .5rem;
+    font-family: "IBMPlexSans";
+    font-size: 2rem;
+    color: white;
+}

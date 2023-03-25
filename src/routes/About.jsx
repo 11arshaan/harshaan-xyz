@@ -36,7 +36,6 @@ export default function About() {
               <li>Game Design</li>
               <li>Copywriting</li>
               <li>Storytelling</li>
-
             </ul>
 
             <div className="skills__list--icons">
@@ -73,7 +72,7 @@ export default function About() {
             <EthSVG title="Ethereum" />
             <SolanaSVG title="Solana" />
             <NodeSVG title="Node.js" />
-            <D3SVG title="D3.js" />
+          
             <AWSSVG title="Amazon Web Services" />
             <UESVG title="Unreal Engine" fill="white"/>
             <UnitySVG title="Unity" fill="white"/>

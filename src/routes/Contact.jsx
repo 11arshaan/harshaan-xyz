@@ -1,6 +1,6 @@
 import "./Contact.scss";
 import "./Home.scss"
-import wavfile from "../assets/audio/Abyss Pulse 1.wav";
+import resume from "../assets/Harshaan Singh Resume.pdf";
 
 import { useRef } from "react";
 import { ReactComponent as IGIcon } from "../assets/svg/ig_icon.svg";
@@ -57,15 +57,16 @@ export default function Contact() {
         <div className="contact__link"><LinkedInIcon className="linkedin" /> <a id="linkedin" href="https://www.linkedin.com/in/harshaan/" rel="noreferrer" target="_blank">/ 11arshaan</a></div>
         <div className="contact__link"><EmailIcon /> <p onClick={copyClipboard} id="email">harshaan.work@gmail.com</p> <span id="copied" ref={copyRef}>Copied!</span></div>
         <div className="contact__link"><PhoneIcon /> <p >770 769 5348</p></div>
-        </div>
-
         <div className="resumebtn">
-            <a href={wavfile} download="Abyss Pulse 1.wav">
+            <a href={resume} download="Harshaan Singh Resume.pdf">
             <button className="home__resume">
               Resume
             </button>
           </a>
         </div>
+        </div>
+
+        
       
     </div>
   );

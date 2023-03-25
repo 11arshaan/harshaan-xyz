@@ -1,0 +1,77 @@
+.art-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  margin: 0 auto;
+  top: -0rem;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  opacity: 1;
+  z-index: 2;
+  animation: fade-in .7s linear;
+  color: white;
+
+  &__card {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 75%;
+    background-color: var(--bg);
+    border: 1px solid silver;
+    border-radius: 1rem;
+  }
+  
+
+  .modalText {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+
+  .close-modal {
+    font-family: "IBMPlexMono-Bold";
+    font-size: 2rem;
+    position: relative;
+    padding-top: 1rem;
+    top: -47%;
+    right: 1%;
+    cursor: pointer;
+    
+  }
+  img {
+    height: 100%;
+    width: 70%;
+    object-fit: cover;
+    padding: 0.8rem;
+    border-radius: 2.6rem;
+    object-position: center;
+    cursor: default;
+    
+  }
+
+  h3 {
+    font-family: "IBMPlexMono";
+    font-size: 3rem;
+  }
+  
+  p {
+    font-family: "IBMPlexSans-Light";
+    font-size: 1.8rem;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+

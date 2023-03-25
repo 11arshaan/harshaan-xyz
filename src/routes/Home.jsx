@@ -1,6 +1,6 @@
 import "./Home.scss";
 import HomeCircleSVG from "../assets/svg/HomeCircle";
-import wavfile from "../assets/audio/Abyss Pulse 1.wav";
+import resume from "../assets/Harshaan Singh Resume.pdf";
 
 import anime from "animejs";
 import { useEffect } from "react";
@@ -25,7 +25,7 @@ export default function Home() {
           <h1 className="home__title">Harshaan Singh</h1>
 
           <h2 className="home__subtitle">I bring ideas to life.</h2>
-          <a href={wavfile} download="Abyss Pulse 1.wav">
+          <a href={resume} download="Harshaan Singh Resume.pdf">
             <button className="home__resume">Resume</button>
           </a>
         </div>

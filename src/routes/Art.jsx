@@ -1,20 +1,44 @@
 import "./Art.scss";
-import { useEffect } from "react";
+import { getImages } from "../utils/firebase.utils";
+import { useEffect, useState, useContext } from "react";
+import { ArtContext } from "../utils/ArtContext";
+import ImageCard from "../components/ImageCard";
+import { ArtModal } from "../components/ArtModal";
+import anime from "animejs/lib/anime.es.js";
 
 export default function Art() {
+  const [visible, setVisible] = useState(false);
+  const [modalImage, setModalImage] = useState({});
+  const { images, setImages } = useContext(ArtContext);
 
-    useEffect(()=>{
-        
-    }, []);
+  function handleImage(e) {
+    const target = e.target;
+    const selectedImage = images.find((img) => img.url === target.src);
+    setModalImage(selectedImage);
+    setVisible(true);
 
-    return (
-    <div className="art">
-        <div className="art__category--container"> 
-            <button className="art__category">All</button>
-            <button className="art__category">3D</button>
-            <button className="art__category">Design</button>
-            <button className="art__category">VFX</button>
-            <button className="art__category">Code</button>
-        </div>
-    </div>);
+  }
+
+  useEffect(() => {
+    getImages().then((imageList) => {
+      setImages(imageList);
+    });
+  }, []);
+
+  return (
+    <>
+      <ArtModal visible={visible} setVisible={setVisible} modalImage={modalImage} />
+      <div className="art">
+        {images.map((image) => (
+          <ImageCard
+            key={image.url}
+            url={image.url}
+            title={image.title}
+            description={image.description}
+            handleImage={handleImage}
+          />
+        ))}
+      </div>
+    </>
+  );
 }
