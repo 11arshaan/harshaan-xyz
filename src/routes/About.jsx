@@ -56,9 +56,9 @@ export default function About() {
           <div className="skills__list">
             <ul>
               <li>React</li>
-              <li>Ethereum / Solana</li>
+              <li>React Native</li>
               <li>WebGL</li>
-              <li>Three.js / Babylon.js</li>
+              <li>Three.js</li>
               <li>Node.js / Express</li>
               <li>MongoDB</li>
               <li>Unreal Engine</li>
@@ -69,8 +69,6 @@ export default function About() {
             <div className="skills__list--icons">
             <ReactSVG title="React.js" />
             <ThreeSVG title="Three.js" fill="white" />
-            <EthSVG title="Ethereum" />
-            <SolanaSVG title="Solana" />
             <NodeSVG title="Node.js" />
           
             <AWSSVG title="Amazon Web Services" />
