@@ -10,12 +10,12 @@
   backdrop-filter: blur(8px);
   opacity: 1;
   z-index: 2;
-  animation: fade-in .7s linear;
+  animation: fade-in 0.7s linear;
   color: white;
 
   &__card {
     display: flex;
-    // flex-direction: column;
+
     align-items: center;
     justify-content: center;
     width: 75%;
@@ -23,13 +23,23 @@
     background-color: var(--bg);
     border: 1px solid silver;
     border-radius: 1rem;
+    overflow: hidden;
+    
+
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+      width: 90%;
+      height: 75%;
+      
+    }
   }
-  
 
   .modalText {
     display: flex;
     flex-direction: column;
     padding-left: 1rem;
+    max-width: 40%;
+    
   }
 
   .close-modal {
@@ -40,7 +50,14 @@
     top: -47%;
     right: 1%;
     cursor: pointer;
-    
+    @media screen and (max-width: 700px) {
+      top: -92%;
+      right: -40%;
+      transform: scale(2);
+      padding: 3rem;
+      padding-bottom: 1rem;
+      opacity: 0.5;
+    }
   }
   img {
     height: 100%;
@@ -51,27 +68,40 @@
     object-position: center;
     cursor: default;
     
+    @media screen and (max-width: 1300px) {
+      width: 60%;
+      
+    }
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      
+      overflow: hidden;
+    }
   }
 
   h3 {
     font-family: "IBMPlexMono";
     font-size: 3rem;
   }
-  
+
   p {
     font-family: "IBMPlexSans-Light";
     font-size: 1.8rem;
+
+    @media screen and (max-width: 700px) {
+      font-size: 1.5rem;
+    }
+      
+    
   }
 }
 
 @keyframes fade-in {
   from {
-    opacity: 0
+    opacity: 0;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
-
-

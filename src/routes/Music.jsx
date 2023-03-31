@@ -16,7 +16,7 @@ export default function Music() {
   const tempDiv ={
 
     justifySelf: "center",
-    marginTop: "5%",
+    marginTop: "10rem",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

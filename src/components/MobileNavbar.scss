@@ -1,4 +1,4 @@
-.navbar {
+.mobile-navbar {
   color: white;
   display: flex;
 
@@ -10,12 +10,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 3% 0.4rem 3%;
+    padding: 0 3% 0.4rem 3%;
     position: fixed;
     background-clip: padding-box;
 
     @media screen and (max-width: 900px) {
       padding: 1rem 1% 0.4rem 1%;
+      top: 0rem;
       
     }
   }
@@ -40,12 +41,27 @@
     }
   }
 
+  &__menu {
+    position: relative;
+    top: .5rem;
+  }
   &__links {
     display: flex;
-    justify-content: space-evenly;
-    align-items: last baseline;
+    position: fixed;
+    right: 0;
+    top: 5.8rem;
+    width: 18rem;
+    padding-right: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-right: -2rem;
     margin-bottom: 0.5rem;
+    background-color: #151515f1;
+    transform: translateX(20rem);
+    z-index: 1;
+    transition: 1s all;
+    
 
     a {
       position: relative;
@@ -55,6 +71,7 @@
       text-decoration: none;
       color: white;
       padding: 0 1.8rem;
+      margin-bottom: 2rem;
       background-color: transparent;
       @media screen and (max-width: 1200px) {
         padding: 0 1rem;
@@ -97,5 +114,11 @@
     padding: 2rem 3% 0rem 3%;
     position: relative;
     background-clip: padding-box;
+  }
+
+  &__links.active {
+    display: flex;
+    transform: translateX(0);
+    transition: 1s all;
   }
 }

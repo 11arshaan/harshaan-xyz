@@ -1,21 +1,16 @@
-import "./Navbar.scss";
+import "./MobileNavbar.scss";
 import { ReactComponent as Logo } from "../assets/svg/sunlogo.svg";
 import { Link } from "react-router-dom";
 import useRainbow from "../utils/useRainbow";
+import {useRef} from 'react';
 
-
-
-export default function Navbar() {
-  
-  
+export default function MobileNavbar() {
   const transitionDelay = 8000;
   const colors = useRainbow(transitionDelay);
   const colorKeys = Object.keys(colors);
-  
+  const ref = useRef();
 
- 
-  
-const rainbowStyle = {
+  const rainbowStyle = {
     // Spread the colors to define them as custom properties
     // on this element
     ...colors,
@@ -38,18 +33,31 @@ const rainbowStyle = {
   `,
   };
 
+  function handleMenu(){
+    ref.current.classList.toggle('active');
+  }
 
+  function handleLink(){
+    ref.current.classList.toggle('active');
+  }
 
   return (
     <>
-      <div className="navbar">
-        <div className="navbar__container" style={rainbowStyle}>
+      <div className="mobile-navbar">
+        <div className="mobile-navbar__container" style={rainbowStyle}>
           <div className="navbar__title">
             <Logo />
-            <Link to="/">Harshaan Singh</Link>
+            <Link to="/">Harshaan</Link>
           </div>
 
-          <div className="navbar__links">
+          <div onClick={handleMenu} className="mobile-navbar__menu">
+            <svg viewBox="0 0 100 80" width="40" height="40" fill="white">
+              <rect width="100" height="8" rx="8"></rect>
+              <rect y="25" width="100" height="8" rx="8"></rect>
+              <rect y="50" width="100" height="8" rx="8"></rect>
+            </svg>
+          </div>
+          <div onClick={handleLink} ref={ref} className="mobile-navbar__links">
             <Link to="/about">Skills</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/art">Art</Link>
@@ -58,8 +66,7 @@ const rainbowStyle = {
           </div>
         </div>
 
-
-        <div className="navbar__container--block" style={rainbowStyle}>
+        {/* <div className="navbar__container--block" style={rainbowStyle}>
           <div className="navbar__title">
             <Logo />
             <Link to="/">Harshaan Singh</Link>
@@ -72,7 +79,7 @@ const rainbowStyle = {
             <Link to="/music">Music</Link>
             <Link to="/contact">Contact</Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

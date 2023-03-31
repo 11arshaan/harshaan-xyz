@@ -17,15 +17,39 @@ import AISVG from "../assets/svg/adobe-illustrator-icon.svg";
 import C4D from "../assets/images/C4D_Logo.png";
 import Nuke from "../assets/svg/icons8-nuke.svg";
 import Blender from "../assets/svg/Blender_logo_no_text.svg";
+import {useState, useEffect} from 'react';
 
 export default function About() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    }
+
+    }, [width]);
+
   return (
     <div className="about">
       <div className="skills">
         <div className="skills__creative">
           <h3>Creative</h3>
 
+         
           <div className="skills__list">
+          {width <= 900 && <div className="skills__list--icons">
+                <AbletonSVG title="Ableton Live" fill="white" />
+                <AESVG title="Adobe After Effects" />
+                <PPSVG title="Adobe Premiere Pro" />
+                <PSSVG title="Adobe Photoshop" />
+                <img title="Adobe Illustrator" src={AISVG} alt="Adobe Illustrator Icon"/>
+                <img title="Cinema 4D" src={C4D} alt="Cinema4D Icon"/>
+                <img title="Blender" src={Blender} alt="Blender Icon" />
+
+            </div> }
             <ul>
               <li>Music Production</li>
               <li>Sound Design</li>
@@ -38,7 +62,7 @@ export default function About() {
               <li>Storytelling</li>
             </ul>
 
-            <div className="skills__list--icons">
+            {width > 900 && <div className="skills__list--icons">
                 <AbletonSVG title="Ableton Live" fill="white" />
                 <AESVG title="Adobe After Effects" />
                 <PPSVG title="Adobe Premiere Pro" />
@@ -46,14 +70,23 @@ export default function About() {
                 <img title="Adobe Illustrator" src={AISVG} alt="Adobe Illustrator Icon"/>
                 <img title="Cinema 4D" src={C4D} alt="Cinema4D Icon"/>
                 <img title="Blender" src={Blender} alt="Blender Icon" />
-                <img title="Foundry Nuke" src={Nuke} alt="Foundry Nuke Icon" />
-            </div>
+
+            </div> }
           </div>
         </div>
 
         <div className="skills__development">
           <h3>Development</h3>
           <div className="skills__list">
+          {width <= 900 && <div className="skills__list--icons">
+            <ReactSVG title="React.js" />
+            <ThreeSVG title="Three.js" fill="white" />
+            <NodeSVG title="Node.js" />
+          
+            <AWSSVG title="Amazon Web Services" />
+            <UESVG title="Unreal Engine" fill="white"/>
+            <UnitySVG title="Unity" fill="white"/>
+            </div>}
             <ul>
               <li>React</li>
               <li>React Native</li>
@@ -66,7 +99,7 @@ export default function About() {
               <li>AWS</li>
             </ul>
 
-            <div className="skills__list--icons">
+            {width >900 && <div className="skills__list--icons">
             <ReactSVG title="React.js" />
             <ThreeSVG title="Three.js" fill="white" />
             <NodeSVG title="Node.js" />
@@ -74,7 +107,7 @@ export default function About() {
             <AWSSVG title="Amazon Web Services" />
             <UESVG title="Unreal Engine" fill="white"/>
             <UnitySVG title="Unity" fill="white"/>
-            </div>
+            </div>}
           </div>
         </div>
       </div>
