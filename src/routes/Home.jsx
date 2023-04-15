@@ -24,7 +24,7 @@ export default function Home() {
           <HomeCircleSVG />
           <h1 className="home__title">Harshaan Singh</h1>
 
-          <h2 className="home__subtitle">I bring ideas to life.</h2>
+          <h2 className="home__subtitle">I bring ideas to life</h2>
           <a href={resume} download="Harshaan Singh Resume.pdf">
             <button className="home__resume">Resume</button>
           </a>

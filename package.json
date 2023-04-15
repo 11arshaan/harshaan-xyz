@@ -8,15 +8,16 @@
     "@testing-library/user-event": "^13.5.0",
     "animejs": "^3.2.1",
     "firebase": "^9.17.1",
+    "howler": "^2.2.3",
     "nanoid": "^4.0.1",
+    "p5": "^1.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-howler": "^5.2.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "sass": "^1.58.0",
     "styled-components": "^5.3.6",
-    "three": "^0.149.0",
+    "three": "^0.151.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
