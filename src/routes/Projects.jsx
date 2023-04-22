@@ -2,6 +2,7 @@ import "./Projects.scss";
 import cloudcastle from "../assets/images/cloudcastle.png";
 import welcomeLogo from "../assets/images/WELCOME_Logo.png";
 import ProjectCard from "../components/ProjectCard";
+import AAWedding from "../assets/images/aa-wedding.png";
 
 export default function Projects() {
   return (
@@ -20,6 +21,13 @@ export default function Projects() {
         description="This is an interactive demo that contains custom components and
             designs. It is also an exhibition of my web graphics experiments."
         link="https://iridescent-quokka-65e71d.netlify.app/"
+      />
+      <ProjectCard
+        img={AAWedding}
+        title="Amarit and Arsheen"
+        subtitle="a wedding RSVP website for Arsheen and Amarit"
+        description="This is an RSVP website featuring a custom firebase backend to handle the guestlist. It features a custom image gallery and RSVP form, as well as decorative animations (video)."
+        link="https://amaritandarsheen.com"
       />
     </div>
   );
