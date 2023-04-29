@@ -9,7 +9,6 @@ import { ArtProvider } from "./utils/ArtContext";
 
 import App from "./App";
 import Home from "./routes/Home";
-import About from "./routes/About";
 import Projects from "./routes/Projects";
 import Art from "./routes/Art";
 import Music from "./routes/Music";
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
-      },
-      {
-        path: "about",
-        element: <About />,
       },
       {
         path: "projects",

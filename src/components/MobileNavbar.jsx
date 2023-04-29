@@ -2,7 +2,7 @@ import "./MobileNavbar.scss";
 import { ReactComponent as Logo } from "../assets/svg/sunlogo.svg";
 import { Link } from "react-router-dom";
 import useRainbow from "../utils/useRainbow";
-import {useRef} from 'react';
+import { useRef } from "react";
 
 export default function MobileNavbar() {
   const transitionDelay = 8000;
@@ -33,12 +33,12 @@ export default function MobileNavbar() {
   `,
   };
 
-  function handleMenu(){
-    ref.current.classList.toggle('active');
+  function handleMenu() {
+    ref.current.classList.toggle("active");
   }
 
-  function handleLink(){
-    ref.current.classList.toggle('active');
+  function handleLink() {
+    ref.current.classList.toggle("active");
   }
 
   return (
@@ -58,7 +58,6 @@ export default function MobileNavbar() {
             </svg>
           </div>
           <div onClick={handleLink} ref={ref} className="mobile-navbar__links">
-            <Link to="/about">Skills</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/art">Art</Link>
             <Link to="/music">Music</Link>
@@ -66,20 +65,7 @@ export default function MobileNavbar() {
           </div>
         </div>
 
-        {/* <div className="navbar__container--block" style={rainbowStyle}>
-          <div className="navbar__title">
-            <Logo />
-            <Link to="/">Harshaan Singh</Link>
-          </div>
-
-          <div className="navbar__links">
-            <Link to="/about">About</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/art">Art</Link>
-            <Link to="/music">Music</Link>
-            <Link to="/contact">Contact</Link>
-          </div>
-        </div> */}
+  
       </div>
     </>
   );
