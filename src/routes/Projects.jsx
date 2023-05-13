@@ -3,6 +3,7 @@ import cloudcastle from "../assets/images/cloudcastle.png";
 import welcomeLogo from "../assets/images/WELCOME_Logo.png";
 import ProjectCard from "../components/ProjectCard";
 import AAWedding from "../assets/images/aa-wedding.png";
+import WebAudioSynth  from "../assets/images/Web-Audio-Synth.png";
 
 export default function Projects() {
   return (
@@ -29,6 +30,12 @@ export default function Projects() {
         description="This is an RSVP website featuring a custom firebase backend to handle the guestlist. It features a custom image gallery and RSVP form, as well as decorative animations (video)."
         link="https://amaritandarsheen.com"
       />
+      <ProjectCard
+      img={WebAudioSynth}
+      title="Web Audio Synthesizer [wip]"
+      subtitle="a node-based audio synthesizer" 
+      description="Built with React Flow and the Web Audio API, this synthesizer provides a node-based interface for creating audio graphs. Current features include combining oscillators with a gain and an analyser node. TO DO: Add more nodes and effects, implement a sequencer and MIDI input, add microphone input, record audio feature, and tone.js"
+      link="https://11arshaan.github.io/web-audio-synthesizer/"/>
     </div>
   );
 }
