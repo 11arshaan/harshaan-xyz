@@ -11,9 +11,9 @@ export default function Projects() {
       <ProjectCard
         img={welcomeLogo}
         title="Eden AI"
-        subtitle="react-native sketchpad app for AI sketch-to-image generation"
+        subtitle="mobile sketchpad app for AI image generation via ControlNet"
         description="This is a mobile app that allows the user to sketch on a touch canvas. The sketch is then sent to a server that is running a custom configuration of the control net AI model. This model can generate high fidelity images after reading the text prompt and scanning the sketched image. The app also includes regular stable diffusion generation via text and image to image. The canvas function was coded from scratch using react-native-skia."
-        link="https://www.welcomejpeg.com/"
+        link="https://www.ai.welcomejpeg.com/"
       />
       <ProjectCard
         img={cloudcastle}
