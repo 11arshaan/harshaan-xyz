@@ -8,8 +8,6 @@ import { Outlet } from "react-router-dom";
 export default function App() {
   const [windowSize, setWindowSize] = useState();
 
-
-
   useEffect(() => {
     setWindowSize(window.innerWidth);
     function handleResize() {
@@ -18,6 +16,7 @@ export default function App() {
 
     window.addEventListener("resize", handleResize);
     handleResize();
+    
     return () => window.removeEventListener("resize", handleResize);
  }, [windowSize]);
 
