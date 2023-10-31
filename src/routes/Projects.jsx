@@ -13,7 +13,7 @@ export default function Projects() {
         title="Eden AI"
         subtitle="mobile sketchpad app for AI image generation via ControlNet"
         description="This is a mobile app that allows the user to sketch on a touch canvas. The sketch is then sent to a server that is running a custom configuration of the control net AI model. This model can generate high fidelity images after reading the text prompt and scanning the sketched image. The app also includes regular stable diffusion generation via text and image to image. The canvas function was coded from scratch using react-native-skia."
-        link="https://www.ai.welcomejpeg.com/"
+        link="https://www.instagram.com/welcome.jpeg/?hl=en"
       />
       <ProjectCard
         img={cloudcastle}
@@ -30,12 +30,12 @@ export default function Projects() {
         description="This is an RSVP website featuring a custom firebase backend to handle the guestlist. It features a custom image gallery and RSVP form, as well as decorative animations (video)."
         link="https://amaritandarsheen.com"
       />
-      <ProjectCard
+      {/* <ProjectCard
       img={WebAudioSynth}
       title="Web Audio Synthesizer [wip]"
       subtitle="a node-based audio synthesizer" 
       description="Built with React Flow and the Web Audio API, this synthesizer provides a node-based interface for creating audio graphs. Current features include combining oscillators with a gain and an analyser node. TO DO: Add more nodes and effects, implement a sequencer and MIDI input, add microphone input, record audio feature, and tone.js"
-      link="https://11arshaan.github.io/web-audio-synthesizer/"/>
+      link="https://11arshaan.github.io/web-audio-synthesizer/"/> */}
     </div>
   );
 }
