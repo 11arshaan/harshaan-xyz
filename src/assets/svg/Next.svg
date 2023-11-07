@@ -1,4 +1,18 @@
-<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16 8L4 14.9282L4 1.0718L16 8Z" fill="#D9D9D9"/>
-<path d="M24 8L12 14.9282L12 1.0718L24 8Z" fill="#D9D9D9"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 14.72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="Next">
+      <polygon id="triangle" class="cls-1" points="8 7.36 .5 1.07 .5 13.64 8 7.36"/>
+      <rect class="cls-1" x="11.5" y="1.36" width="3" height="12"/>
+    </g>
+  </g>
 </svg>
