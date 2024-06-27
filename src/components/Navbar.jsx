@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="navbar__container" style={rainbowStyle}>
           <div className="navbar__title">
             <Logo />
-            <Link to="/">Harshaan Singh</Link>
+            <Link to="/">Harshaan</Link>
           </div>
 
           <div className="navbar__links">
@@ -51,7 +51,7 @@ export default function Navbar() {
         <div className="navbar__container--block" style={rainbowStyle}>
           <div className="navbar__title">
             <Logo />
-            <Link to="/">Harshaan Singh</Link>
+            <Link to="/">Harshaan</Link>
           </div>
 
           <div className="navbar__links">

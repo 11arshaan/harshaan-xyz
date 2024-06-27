@@ -22,7 +22,7 @@ export default function Home() {
       <div className="home">
         <div className="home__titlebox">
           <HomeCircleSVG />
-          <h1 className="home__title">Harshaan Singh</h1>
+          <h1 className="home__title">Harshaan</h1>
 
           <h2 className="home__subtitle">I bring ideas to life</h2>
           <a href={resume} download="Harshaan Singh Resume.pdf">
