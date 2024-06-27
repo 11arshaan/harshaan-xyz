@@ -4,10 +4,18 @@ import welcomeLogo from "../assets/images/WELCOME_Logo.png";
 import ProjectCard from "../components/ProjectCard";
 import AAWedding from "../assets/images/aa-wedding.png";
 import WebAudioSynth  from "../assets/images/Web-Audio-Synth.png";
+import LSLogo from "../assets/images/LS Logo.png";
 
 export default function Projects() {
   return (
     <div className="projects">
+      <ProjectCard
+        img={LSLogo}
+        title="Loopscope"
+        subtitle="a huge upgrade to Loopscope: a music sample store built on Shopify"
+        description="I built a custom music player, revamped the UI, and helped implement a subscription service to Loopscope's website, hosted on Shopify. Using Liquid as well as a custom backend, me and the team were able to bypass international restrictions to ensure Loopscope could provide the experience they wished for."
+        link="https://loopscope.io/"
+      />
       <ProjectCard
         img={welcomeLogo}
         title="Eden AI"
