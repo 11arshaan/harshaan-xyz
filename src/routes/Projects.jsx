@@ -1,5 +1,5 @@
 import "./Projects.scss";
-import cloudcastle from "../assets/images/cloudcastle.png";
+import weblab from "../assets/images/weblab.jpg";
 import welcomeLogo from "../assets/images/WELCOME_Logo.png";
 import ProjectCard from "../components/ProjectCard";
 import AAWedding from "../assets/images/aa-wedding.png";
@@ -24,12 +24,12 @@ export default function Projects() {
         link="https://welcomejpeg.com/"
       />
       <ProjectCard
-        img={cloudcastle}
-        title="Web Design Lab"
+        img={weblab}
+        title="Web Lab"
         subtitle="custom components and web graphic experiments"
         description="This is an interactive demo that contains custom components and
             designs. It is also an exhibition of my web graphics experiments."
-        link="https://iridescent-quokka-65e71d.netlify.app/"
+        link="https://main--harshaan-web-lab.netlify.app/"
       />
       <ProjectCard
         img={AAWedding}
